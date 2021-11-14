@@ -5,8 +5,8 @@ This repo illustrates how to make a deployment to AWS EKS (Elastic Kubernetes Se
 * [Set variables for terraform](#set-variables)
 * [Deploy](#deploy)
 * [Terraform Plan](#terraform-plan-to-be-applied)
-* [Destroy](#destroy)
 * [Test deployment](#test-deployment)
+* [Destroy](#destroy)
 
 ## Set Variables
 - You can set all variables in _".envrc"_ file before executing the deployment script.
@@ -485,13 +485,6 @@ To perform exactly these actions, run the following command to apply:
     terraform apply "out.tfplan"
 ```
 
-## Destroy
-Destroy script basically destroys all resources managed in this terraform configuration. <br>
-**NOTE** We need to remove load balancer service at first otherwise AWS will not let us remove VPC resources.
-```shell
-./destroy.sh
-```
-
 ## Test deployment
 - At first, we need to get AWS ELB address to access containers running in pods.
 - Let's have a look at the "backend-api-service" service under mvs namespace:
@@ -525,4 +518,11 @@ curl --location --request POST 'http://a17da47d5075e4b62809ac95b2e56b14-35303762
     "brand": "Apple",
     "model": "13 Pro Max"
 }
+```
+
+## Destroy
+Destroy script basically destroys all resources managed in this terraform configuration. <br>
+**NOTE** We need to remove load balancer service at first otherwise AWS will not let us remove VPC resources.
+```shell
+./destroy.sh
 ```
