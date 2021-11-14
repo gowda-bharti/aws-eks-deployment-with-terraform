@@ -2,10 +2,10 @@
 
 This repo illustrates how to make a deployment to AWS EKS (Elastic Kubernetes Service) with using terraform.   
 
-* [Set variables for terraform](#set variables)
-* [Deploy](#Deploy)
-* [Terraform Plan](#Terraform Plan)
-* [Destroy](#Destroy)
+* [Set variables for terraform](#set-variables)
+* [Deploy](#deploy)
+* [Terraform Plan](#terraform-plan)
+* [Destroy](#destroy)
 
 ## Set Variables
 - You can set all variables in _".envrc"_ file before executing the deployment script.
