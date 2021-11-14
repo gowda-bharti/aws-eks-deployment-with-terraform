@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: device-backend-api
+  namespace: mvs
+  labels:
+    app: device-backend-api
+    env: prod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: device-backend-api
+      env: prod
+  template:
+    metadata:
+      labels:
+        app: device-backend-api
+        env: prod
+    spec:
+      containers:
+        - name: simple-device-backend-api
+          image: docker.io/soyvural/simple-device-api:0.0.1
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              memory: 100Mi
+              cpu: 80m
+            requests:
+              cpu: 50m
+              memory: 50Mi
