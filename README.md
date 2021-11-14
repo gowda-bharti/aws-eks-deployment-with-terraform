@@ -4,7 +4,7 @@ This repo illustrates how to make a deployment to AWS EKS (Elastic Kubernetes Se
 
 * [Set variables for terraform](#set-variables)
 * [Deploy](#deploy)
-* [Terraform Plan](#terraform-plan)
+* [Terraform Plan](#terraform-plan-to-be-applied)
 * [Destroy](#destroy)
 
 ## Set Variables
