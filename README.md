@@ -6,6 +6,7 @@ This repo illustrates how to make a deployment to AWS EKS (Elastic Kubernetes Se
 * [Deploy](#deploy)
 * [Terraform Plan](#terraform-plan-to-be-applied)
 * [Destroy](#destroy)
+* [Test deployment](#test-deployment)
 
 ## Set Variables
 - You can set all variables in _".envrc"_ file before executing the deployment script.

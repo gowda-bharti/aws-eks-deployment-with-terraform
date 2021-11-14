@@ -18,7 +18,7 @@ terraform apply -auto-approve out.tfplan;
 # set ~/.kube/config to connect and manages k8s cluster with kubectl.
 ./set-kubeconfig.sh
 
-# if namespace already exists then ignore to avoid pipeline to be failed.
+# if namespace already exists then ignore it to avoid pipeline to be failed.
 kubectl create namespace mvs --dry-run=client -o yaml | kubectl apply -f -
 
 # make api-deployment to cluster.
